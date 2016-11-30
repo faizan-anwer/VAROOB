@@ -1,0 +1,853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>360Training</title>
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+<!--[if IE 7]>  
+<link rel="stylesheet" type="text/css" href="css/ie7.css" />  
+<![endif]-->
+<!--[if IE 8]>  
+<link rel="stylesheet" type="text/css" href="css/ie8.css" />  
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="css/ie9.css" />
+<![endif]-->
+
+<!-- BEGIN CommonJSToInclude.jspf -->
+<!-- END CommonJSToInclude.jspf -->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+jQuery(document).ready(function() {
+$('.package-title a').click(function(){
+		  if($(this).hasClass("SC-active"))
+		  {
+			  $('.package-title a').removeClass("SC-active");
+			  $(".package-detail").slideUp('fast');
+		  }
+		  else
+		  {
+			  $('.package-title a').removeClass("SC-active");
+			  $(".package-detail").slideUp('fast');
+			  $(('#' +$(this).attr("class"))).slideToggle('slow');
+			  $(this).addClass("SC-active");
+		  }	  
+	});
+});
+	//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+
+jQuery(document).ready(function(){
+	jQuery('div#sideNav li > ul li span[class=current]').parents('ul').show().prev('span').addClass('accordionExpanded');
+	jQuery('div#sideNav li:has(ul)').addClass('nobg');	
+	jQuery('<span></span>').insertBefore('div#sideNav li:has(ul) ul');	
+	jQuery('div#sideNav li:has(ul) span').addClass('accordion');
+	jQuery('div#sideNav ul.level2 li:not(:has(ul)) a').addClass('arrow').css({'padding-left':'20px','margin-left':'0px','background-color':'#fff'});
+	jQuery('div#sideNav ul.level3 li:not(:has(ul)) a').addClass('arrow').css({'padding-left':'25px','margin-left':'0px'});
+	jQuery('div#sideNav li:has(ul) > span').click(function() {
+		jQuery(this).toggleClass('accordionExpanded');
+		jQuery(this).next('ul').slideToggle('fast');
+		jQuery(this).parent().siblings('li').children('ul:visible').slideUp('fast').parent('li').find('span').removeClass('accordionExpanded');
+		return false;
+	});
+		
+	//for active link
+	var url = document.URL;
+	// Will also work for relative and absolute hrefs
+	jQuery('div#sideNav a').filter(function() { return this.href == url; }).addClass('active').parents('ul').show().prev('span').addClass('accordionExpanded');
+		
+});
+
+//]]>
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+<body onload="MM_preloadImages('images/enroll-now-hover.png','images/add-to-cart-hover.png')">
+<!-- BEGIN StoreCommonUtilities.jspf --> 
+<!-- END StoreCommonUtilities.jspf --> 
+
+<!-- BEGIN LayoutContainerTop.jspf -->
+<div id="main-container" class="clearfix">
+  <div id="wrapper"> 
+    <!-- BEGIN Header --> 
+    <!-- BEGIN HeaderDisplay.jspf --> 
+    
+    <!-- BEGIN CachedHeaderDisplay.jsp -->
+    
+    <div id="header">
+        <div class="logo"><a href="#"><img border="0px" width="214" height="86" alt="everest.com" src="images/logo.gif" /></a></div>
+      <div class="header_right">
+        <div class="sales_enroll"><span class="dial-no">(888) 249-8145</span> 
+        <span class="header-top">M-F 8am-5pm EST</span> </div>
+        <div class="search-container">
+        <span class="search-btn"><a href="#"><img src="images/search-left-corner-btn.jpg" width="32" height="29" alt="" /></a></span>
+        <span class="inputarea"><input name="" type="text" onblur="if(value==''){value='Search...';}" onclick="if(value=='Search...'){value='';}" value="Search..." /></span>
+        <span class="searchrightcorner"><img src="images/search-right-corner.jpg" width="18" height="29" alt="" /></span>
+        </div>
+      <!-- BEGIN ESpotNavDisplay.jsp -->
+      <div id="navigation">
+        <div class="n_menu">
+        <ul>
+          <li class="home"><a href="#"><img src="images/home-icon.png" width="24" height="21" alt="" /></a></li>
+          <li class="seprator"></li>
+          <li><a href="#"> Request Information</a></li>
+          <li class="seprator"></li>
+          <li><a href="services.html"> Support</a></li>
+          <li class="seprator"></li>
+          <!--class="chat" -->
+          <li class="login"><a href="#" class="logintxt"> Log in </a>
+            <div class="popup_login" style="display: none;">
+              <div class="loginform">
+                                                                              <dl>
+                  <dt><a href="#">Log in and continue shopping</a></dt>
+                  <dt><a href="#">Go to my courses (My LMS)</a></dt>
+                  </dl>
+                </div>
+            </div>
+        
+          </li>
+          <li class="seprator"></li>
+          <!-- BEGIN MiniShopCartDisplay.jsp -->
+          <li class="cart"><a href="#" class="carttxt"> 0 Item(s) </a>
+          
+          <div class="popup_cart" style="display: none;">
+              <div class="cart_menu">
+               
+                  <div class="cartitems_container"><div class="cartitems"><span class="item_name">Maximizing Employee Performance</span><span class="item_price">$40.00</span></div></div>
+
+                  <span class="checkout_btn"><input name="" type="image" src="images/checkout_btn.png" /></span>
+             
+                </div>
+            </div>
+          </li>
+          
+        
+          <!-- END MiniShopCartDisplay.jsp -->
+        </ul>
+        </div>
+        
+        <!-- END ESpotNavDisplay.jsp --> 
+        
+        <!-- END CachedHeaderDisplay.jsp --> 
+        <!-- END HeaderDisplay.jspf --> 
+        
+        <!-- END Navigation --> 
+        <!-- BEGIN LeftColumn --> 
+        
+        <!-- BEGIN LeftSidebarDisplay.jspf --> 
+        <!-- BEGIN CachedLeftSidebarDisplay.jsp -->
+        <div class="clr"></div>
+        </div>
+      <!-- END Navigation --> 
+ </div>
+
+      
+      <!--<div class="live_sale"> (888) 249-8145 |  M-F 8am-5pm EST</div>--> 
+      
+      <!-- BEGIN Navigation --> 
+      
+
+      
+    </div>
+    
+    <!-- END Header --> 
+    
+    <!-- Breadcrum Start -->
+    <div class="breadcrum-menu">
+      <ul class="breadcrum">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Business Skills</a></li>
+        <li class="last active"><a href="#">Effective Leadership</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <!-- Breadcrum End --> 
+    
+    <!-- BEGIN LeftColumn -->
+    <div id="leftcolumn"> 
+      <!-- BEGIN CategoriesNavDisplay.jspf-->
+      <div class="left-heading">Career Options</div>
+      <div id="sideNav">
+        <ul class="level1">
+          <li><a href="javascript:void();" title="Business Skills">Business Skills</a>
+            <ul class="level2">
+              <li><a href="#" title="Communication">Communication </a>
+                <ul class="level3">
+                  <li><a href="#">Management Leadership</a></li>
+                  <li><a href="#">Blackout 2003</a></li>
+                  <li><a href="#">Condition Monitoring</a></li>
+                </ul>
+              </li>
+              <li><a href="#" title="Management Leadership">Management Leadership</a>
+                <ul class="level3">
+                  <li><a href="catalog.html">Effective Leadership</a>
+                    <ul class="level4">
+                      <li><a href="#">California Course</a></li>
+                      <li class="active"><a href="#">Texas Course</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" title="Career Training Programs">Career Training Programs</a>
+            <ul class="level2">
+              <li><a href="#">By Library Subscription</a>
+                <ul class="level3">
+                  <li><a href="#">Power Generation Training</a></li>
+                  <li><a href="#">Power Transmission Training</a></li>
+                  <li><a href="#">Power Distribution Training</a></li>
+                </ul>
+              </li>
+              <li><a href="#">By Individual Courses</a>
+                <ul class="level3">
+                  <li><a href="transmission-training-courses/">Transmission</a>
+                    <ul class="level4">
+                      <li><a href="transmission-grid-dymanics/">Grid Dynamics</a></li>
+                      <li><a href="transmission-control-nerc-standards/">Controlling to NERC Standards</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="generation-training-courses/">Generation</a>
+                    <ul class="level4">
+                      <li><a href="generation-transmission-system-operations/">Transmission System Operations</a></li>
+                      <li><a href="generation-control-nerc-standards/">Controlling to NERC Standards</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="distribution-training-courses/">Distribution</a>
+                    <ul class="level4">
+                      <li><a href="distribution-transmission-system-operation/">Transmission System Operations</a></li>
+                      <li><a href="distribution-system-protection-technology/">System Protection Technology</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" title="Cosmetology Education">Cosmetology Education </a>
+            <ul class="level2">
+              <li><a href="#">By Library Subscription</a>
+                <ul class="level3">
+                  <li><a href="#">Industrial Maintenance Curriculum</a></li>
+                  <li><a href="#">Power Plant Operations Curriculum</a></li>
+                  <li><a href="#">Basic Process Operations Curriculum</a></li>
+                </ul>
+              </li>
+              <li><a href="#">100 Industrial Safety &amp; Health </a>
+                <ul class="level3">
+                  <li><a href="#">101 Personal Protective Equipment</a></li>
+                  <li><a href="#">102 Worksite Safety</a></li>
+                  <li><a href="#">103 First Aid</a></li>
+                </ul>
+              </li>
+              <li><a href="#">200 Industrial Maintenance</a>
+                <ul class="level3">
+                  <li><a href="#">201 Introduction to Industrial Maintenance and Tools of the Trade</a></li>
+                  <li><a href="#">202 Belt Drive Maintenance</a></li>
+                  <li><a href="#">203 Bearing Maintenance</a></li>
+                  <li><a href="#">205 Gear Maintenance</a></li>
+                </ul>
+              </li>
+              <li><a href="#">400 Industrial Electricity</a>
+                <ul class="level3">
+                  <li><a href="#">401 Direct Current (DC)</a></li>
+                  <li><a href="#">402 Alternating Current (AC)</a></li>
+                  <li><a href="#">405 Power Quality</a></li>
+                </ul>
+              </li>
+              <li><a href="#">500 Power Generating System and Operations</a>
+                <ul class="level3">
+                  <li><a href="#">501 Power Generation</a></li>
+                  <li><a href="#">505 Turbine Auxiliaries System and Control</a></li>
+                  <li><a href="#">507 Generator and Auxiliary Systems and Control</a></li>
+                  <li><a href="#">511 Combustion Turbine Fundamentals</a></li>
+                  <li><a href="#">521 Combustion Air and Flue Gas System</a></li>
+                  <li><a href="#">522 Coal Handling System</a></li>
+                  <li><a href="#">523 Boiler Fuel Systems</a></li>
+                </ul>
+              </li>
+              <li><a href="#">600 Industrial Instrumentation</a>
+                <ul class="level3">
+                  <li><a href="#">603 Process Control Variables</a></li>
+                  <li><a href="#">605 Test Equipment</a></li>
+                </ul>
+              </li>
+              <li><a href="#">700 Process Systems and Operations</a>
+                <ul class="level3">
+                  <li><a href="#">701 Petroleum Refining</a></li>
+                  <li><a href="#">707 Process Heaters</a></li>
+                  <li><a href="#">709 Process Tanks</a></li>
+                  <li><a href="#">711 Distillation</a></li>
+                </ul>
+              </li>
+              <li><a href="#">800 Industrial Machining and Welding</a>
+                <ul class="level3">
+                  <li><a href="#">801 Precision Measurement</a></li>
+                  <li><a href="#">803 Layout and Bench Work</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" title="Environmental Health and Safety">Environmental Health and Safety</a>
+            <ul class="level2">
+              <li><a href="#">By Library Subscription</a>
+                <ul class="level3">
+                  <li><a href="#">Safety Training For Oil &amp; Gas</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Green Building</a>
+                <ul class="level3">
+                  <li><a href="#">Commercial Green Building</a></li>
+                  <li><a href="#">Green Building with Steel</a></li>
+                  <li><a href="#">Green Infrastructure</a></li>
+                  <li><a href="#">Residential Green Building</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Mine Safety Training - MSHA Part 46</a>
+                <ul class="level3">
+                  <li><a href="#">Surface Miner Training</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Occupational Health &amp; Safety Training</a>
+                <ul class="level3">
+                  <li><a href="#">HAZWOPER Training</a></li>
+                  <li><a href="#">Industrial Hygiene Training</a></li>
+                  <li><a href="#">Supervisor and Competent Person Training</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Transportation Safety Training</a>
+                <ul class="level3">
+                  <li><a href="#">DOT Training</a></li>
+                  <li><a href="#">Driver Safety Training</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Underground Storage Tank (UST) Training</a>
+                <ul class="level3">
+                  <li><a href="#">Alabama</a></li>
+                  <li><a href="#">West Virginia</a></li>
+                  <li><a href="#">Wisconsin</a></li>
+                  <li><a href="#">Wyoming</a></li>
+                </ul>
+              </li>
+              <li><a href="#">EHS Certification Programs</a></li>
+              <li><a href="#">Environmental Safety</a></li>
+              <li><a href="#">Formacion en Materia De Seguridad</a></li>
+            </ul>
+          </li>
+          <li><a href="#" title="Financial Services Education">Financial Services Education </a>
+            <ul class="level2">
+              <li><a href="trades-engineering-training-subscription-kits/">By Library Subscription</a>
+                <ul class="level3">
+                  <li><a href="air-conditioning-fundamentals/">Air Conditioning Fundamentals</a></li>
+                  <li><a href="refrigeration-equipments/">Refrigeration Equipment</a></li>
+                  <li><a href="standard-90-1-fundamentals/">Fundamentals of Standard 90.1</a></li>
+                  <li><a href="sustainable-green-guide-fundamentals/">Fundamentals of Sustainable Buildings and High Performance Systems Design (GREENGUIDE)- IP</a></li>
+                </ul>
+              </li>
+              <li><a href="green-building-leed-training/">Green Building/LEED</a>
+                <ul class="level3">
+                  <li><a href="commercial-green-building/">Commercial Green Building</a></li>
+                </ul>
+              </li>
+              <li><a href="distribution-wholesaling/">Distribution and Wholesaling</a>
+                <ul class="level3">
+                  <li><a href="distribution-wholesaling-training-course/">Distribution and Wholesaling</a></li>
+                </ul>
+              </li>
+              <li><a href="electrician-continuing-education/">Electrician Continuing Education </a>
+                <ul class="level3">
+                  <li><a href="oregon-electrician-continuing-education/">Oregon</a></li>
+                  <li><a href="florida-electrician-continuing-education/">Florida</a></li>
+                  <li><a href="texas-electrician-continuing-education/">Texas</a></li>
+                  <li><a href="wisconsin-electrician-continuing-education/">Wisconsin</a></li>
+                </ul>
+              </li>
+              <li><a href="engineering-pdh-education/">Engineering PDH</a>
+                <ul class="level3">
+                  <li><a href="ashrae-standard-90-1-architects/">ASHRAE Fundamentals of Standard 90.1 for Architects</a></li>
+                  <li><a href="engineering-refrigeration-fundamentals/">Fundamentals of Refrigeration</a></li>
+                  <li><a href="engineering-refrigeration-equipment/">Refrigeration Equipment</a></li>
+                </ul>
+              </li>
+              <li><a href="heating-ventilation-air-conditioning-education/">Heating Ventilation and Air Conditioning Education</a>
+                <ul class="level3">
+                  <li><a href="hvac-contractor-continuing-education/">HVAC- Contractor Continuing Education</a></li>
+                  <li><a href="hvac-technician-continuing-education/">HVAC- Technician Continuing Education</a></li>
+                  <li><a href="nate-trades-engineering-course/">NATE</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li> <a href="#"> Food and Beverage Programs </a></li>
+          <li> <a href="#" > Healthcare Education </a></li>
+          <li> <a href="#"> HR, Ethics &amp; Compliance </a></li>
+          <li> <a href="#"> Industrial Education </a></li>
+          <li> <a href="#"> Insurance Education </a></li>
+          <li> <a href="#"> IT Certification </a></li>
+          <li> <a href="#"> Power and Utilities </a></li>
+          <li> <a href="#"> Quality Management Education </a></li>
+          <li> <a href="#"> Real Estate Education </a></li>
+          <li> <a href="#"> Trades and Engineering </a></li>
+        </ul>
+      </div>
+      <!-- END CategoriesNavDisplay.jspf--> 
+    </div>
+    <!-- END CachedLeftSidebarDisplay.jsp --> 
+    
+    <!-- END LeftSidebarDisplay.jspf --> 
+    
+    <!-- END LayoutContainerTop.jspf --> 
+    
+    <!-- End LeftColumn --> 
+    <!-- BEGIN SlideShow -->
+    <div id="template_content">
+      <div class="catalog-rightarea">
+        <div class="catalog-toparea">
+          <div class="catalog-leftcontent">
+            <h1>Effective Leadership</h1>
+            <h3>Take the Texas Leadership course</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Maecenas malesuada velit tellus. Mauris ultrices diam 
+              mi sagittis nibh lobortis pellentesque in ac lacus. </p>
+            <p>Nullam a ligula elit. Sed elementum sem ac ipsum 
+              commodo vitae accumsan nisi gravida. Integer quis amet, consectetur 
+              adipiscing elitm aecenas malite.</p>
+            <div class="SC-jumpmenu">
+              <select onchange="window.location.href=this.options[this.selectedIndex].value" id="jumpmenu" name="jumpmenu">
+                <option selected="selected" value="#">Browse States/Categories</option>
+                <option value="#" title="Alabama ">Alabama</option>
+                <option value="#" title="Alaska ">Alaska</option>
+                <option value="#" title="Arizona ">Arizona</option>
+                <option value="#" title="Arkansas ">Arkansas</option>
+                <option value="#" title="California ">California</option>
+                <option value="#" title="Colorado ">Colorado</option>
+                <option value="#" title="Connecticut ">Connecticut</option>
+                <option value="#" title="Delaware ">Delaware</option>
+                <option value="#" title="Florida ">Florida</option>
+                <option value="#" title="Georgia ">Georgia</option>
+                <option value="#" title="Hawaii ">Hawaii</option>
+                <option value="#" title="Idaho ">Idaho</option>
+                <option value="#" title="Illinois">Illinois</option>
+                <option value="#" title="Indiana ">Indiana</option>
+                <option value="#" title="Iowa ">Iowa</option>
+                <option value="#" title="Kansas ">Kansas</option>
+                <option value="#" title="Kentucky ">Kentucky</option>
+                <option value="#" title="Louisiana ">Louisiana</option>
+                <option value="#" title="Maine ">Maine</option>
+                <option value="#" title="Maryland ">Maryland</option>
+                <option value="#" title="Massachusetts ">Massachusetts</option>
+                <option value="#" title="Michigan ">Michigan</option>
+                <option value="#" title="Minnesota">Minnesota</option>
+                <option value="#" title="Mississippi">Mississippi</option>
+                <option value="#" title="Missouri">Missouri</option>
+                <option value="#" title="Montana">Montana</option>
+                <option value="#" title="Nebraska">Nebraska</option>
+                <option value="#" title="Nevada">Nevada</option>
+                <option value="#" title="New Hampshire">New Hampshire</option>
+                <option value="#" title="New Jersey">New Jersey</option>
+                <option value="#" title="New Mexico">New Mexico</option>
+                <option value="#" title="New York">New York</option>
+                <option value="#" title="North Carolina">North Carolina</option>
+                <option value="#" title="North Dakota">North Dakota</option>
+                <option value="#e" title="Oklahoma">Oklahoma</option>
+                <option value="#" title="Pennsylvania">Pennsylvania</option>
+                <option value="#" title="Rhode Island">Rhode Island</option>
+                <option value="#" title="South Carolina ">South Carolina</option>
+                <option value="#" title="South Dakota ">South Dakota</option>
+                <option value="#" title="Tennessee">Tennessee</option>
+                <option value="#" title="Texas ">Texas</option>
+                <option value="#" title="Utah">Utah</option>
+                <option value="#" title="Vermont">Vermont</option>
+                <option value="#" title="Virginia">Virginia</option>
+                <option value="#" title="Washington">Washington</option>
+                <option value="#" title="Washington DC">Washington DC</option>
+                <option value="#" title="West Virginia">West Virginia</option>
+                <option value="#" title="Wisconsin">Wisconsin</option>
+                <option value="#" title="Wyoming ">Wyoming</option>
+              </select>
+            </div>
+          </div>
+          <span class="catalog-banner"> <img src="images/catalog-top-banner.png" alt="Catalog Banner" border="0" /> </span> </div>
+        <div class="product-area">
+          <div class="product-call">
+            <p class="heading">Packages</p>
+            <div class="package-list-box">
+              <div class="package-toparea">
+                <div class="package-list-leftarea">
+                  <div class="package-list-map"><span class="icon-tx"></span></div>
+                  <div class="package-list-heading"> Ultimate Success Leadership Online Package
+                    Heading Line 2 if Needed </div>
+                  <div class="package-details">
+                    <ul class="ch-icon">
+                      <li>Credit Hour: 0.0</li>
+                      <li>Duration: 2 hrs.</li>
+                      <li class="last">Price: $<span class="package-price">279</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="package-list-rightarea">
+                  <div class="enroll-now"> 
+                    <input type="image" src="images/enroll-now.png" onmouseover="this.src='images/enroll-now-hover.png'" onmouseout="this.src='images/enroll-now.png'" name="enroll-now"  />
+                  <!--<a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Enroll Now','','images/enroll-now-hover.png',1)"><img src="images/enroll-now.png" alt="Enroll Now" width="103" height="28" id="Enroll Now" /></a>--> </div>
+                  <div class="user-input"> No. of Users
+                    <input type="text"  class="user-value input-area"  />
+                  </div>
+                  <div> </div>
+                </div>
+              </div>
+              <div class="package-bottomarea">
+                <div class="package-line"></div>
+                <div class="package-header-2">
+                  <div class="package-title"> <a class="b215701" href="javascript:void();">View Package Benefits</a> </div>
+                  <div class="package-title"> <a class="c215701" href="javascript:void();">Included Courses</a> </div>
+                </div>
+              </div>
+              <div class="package-detail" id="b215701">
+                <p><strong>Kit Description: </strong></p>
+                <p>Must have C-Store Employee courses for food &amp; beverage sales.</p>
+                <p><strong>Target Audience: </strong></p>
+                <p>Non-Manager level employees for C-Store industry. </p>
+                <p><strong>Difficulty Level: </strong></p>
+                <p>Easy </p>
+                <p><strong>Topics covered:</strong></p>
+                <p>Topics Covered:&nbsp;&nbsp; Food Safety Handler &ndash; Providing a foundational education for the proper handling and practice of Food.&nbsp;&nbsp; Alcohol Seller Off-Premises &ndash; Providing a necessary education in proper liability protection for employee and company, how to recognize the effects of alohol, general knowledge of the effects of alcohol, how to properly check identification and recognize minors.&nbsp;&nbsp; Tobacco Seller &ndash; Covering the proper methods to sell tobacco to customers. Students will learn facts about tobacco such as origin and health concerns. Students will also learn how to card customers and spot fradulent identification.</p>
+              </div>
+              <div class="package-detail" id="c215701">
+                <p><strong>Kit Description: </strong></p>
+                <p>Must have C-Store Employee courses for food &amp; beverage sales.</p>
+                <p><strong>Target Audience: </strong></p>
+                <p>Non-Manager level employees for C-Store industry. </p>
+                <p><strong>Difficulty Level: </strong></p>
+                <p>Easy </p>
+                <p><strong>Topics covered:</strong></p>
+                <p>Topics Covered:&nbsp;&nbsp; Food Safety Handler &ndash; Providing a foundational education for the proper handling and practice of Food.&nbsp;&nbsp; Alcohol Seller Off-Premises &ndash; Providing a necessary education in proper liability protection for employee and company, how to recognize the effects of alohol, general knowledge of the effects of alcohol, how to properly check identification and recognize minors.&nbsp;&nbsp; Tobacco Seller &ndash; Covering the proper methods to sell tobacco to customers. Students will learn facts about tobacco such as origin and health concerns. Students will also learn how to card customers and spot fradulent identification.</p>
+              </div>
+            </div>
+            <div class="package-list-box">
+              <div class="package-toparea">
+                <div class="package-list-leftarea">
+                  <div class="package-list-map"> <span class="icon-tx"></span> </div>
+                  <div class="package-list-heading"> Ultimate Success Leadership Online Package
+                    Heading Line 2 if Needed </div>
+                  <div class="package-details">
+                    <ul class="ch-icon">
+                      <li>Credit Hour: 0.0</li>
+                      <li>Duration: 2 hrs.</li>
+                      <li class="last">Price: $<span class="package-price">279</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="package-list-rightarea">
+                  <div class="enroll-now">
+                    <input type="image" src="images/enroll-now.png" onmouseover="this.src='images/enroll-now-hover.png'" onmouseout="this.src='images/enroll-now.png'" name="enroll-now"  />
+                 <!-- <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Enroll Now2','','images/enroll-now-hover.png',1)"><img src="images/enroll-now.png" alt="Enroll Now" width="103" height="28" id="Enroll Now2" /></a>--> </div>
+                  <div class="user-input"> No. of Users
+                    <input type="text"  class="user-value input-area"  />
+                  </div>
+                  <div> </div>
+                </div>
+              </div>
+              <div class="package-bottomarea">
+                <div class="package-line"></div>
+                <div class="package-header-2">
+                  <div class="package-title"> <a class="b215702" href="javascript:void();">View Package Benefits</a> </div>
+                  <div class="package-title"> <a class="c215702" href="javascript:void();">Included Courses</a> </div>
+                </div>
+              </div>
+              <div class="package-detail" id="b215702">
+                <p><strong>Kit Description: </strong></p>
+                <p>Must have C-Store Employee courses for food &amp; beverage sales.</p>
+                <p><strong>Target Audience: </strong></p>
+                <p>Non-Manager level employees for C-Store industry. </p>
+                <p><strong>Difficulty Level: </strong></p>
+                <p>Easy </p>
+                <p><strong>Topics covered:</strong></p>
+                <p>Topics Covered:&nbsp;&nbsp; Food Safety Handler &ndash; Providing a foundational education for the proper handling and practice of Food.&nbsp;&nbsp; Alcohol Seller Off-Premises &ndash; Providing a necessary education in proper liability protection for employee and company, how to recognize the effects of alohol, general knowledge of the effects of alcohol, how to properly check identification and recognize minors.&nbsp;&nbsp; Tobacco Seller &ndash; Covering the proper methods to sell tobacco to customers. Students will learn facts about tobacco such as origin and health concerns. Students will also learn how to card customers and spot fradulent identification.</p>
+              </div>
+              <div class="package-detail" id="c215702">
+                <p><strong>Kit Description: </strong></p>
+                <p>Must have C-Store Employee courses for food &amp; beverage sales.</p>
+                <p><strong>Target Audience: </strong></p>
+                <p>Non-Manager level employees for C-Store industry. </p>
+                <p><strong>Difficulty Level: </strong></p>
+                <p>Easy </p>
+                <p><strong>Topics covered:</strong></p>
+                <p>Topics Covered:&nbsp;&nbsp; Food Safety Handler &ndash; Providing a foundational education for the proper handling and practice of Food.&nbsp;&nbsp; Alcohol Seller Off-Premises &ndash; Providing a necessary education in proper liability protection for employee and company, how to recognize the effects of alohol, general knowledge of the effects of alcohol, how to properly check identification and recognize minors.&nbsp;&nbsp; Tobacco Seller &ndash; Covering the proper methods to sell tobacco to customers. Students will learn facts about tobacco such as origin and health concerns. Students will also learn how to card customers and spot fradulent identification.</p>
+              </div>
+            </div>
+            <div class="package-list-box">
+              <div class="package-toparea">
+                <div class="package-list-leftarea">
+                  <div class="package-list-map"> <span class="icon-tx"></span> </div>
+                  <div class="package-list-heading"> Ultimate Success Leadership Online Package
+                    Heading Line 2 if Needed </div>
+                  <div class="package-details">
+                    <ul class="ch-icon">
+                      <li>Credit Hour: 0.0</li>
+                      <li>Duration: 2 hrs.</li>
+                      <li class="last">Price: $<span class="package-price">279</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="package-list-rightarea">
+                  <div class="enroll-now">
+                    <input type="image" src="images/enroll-now.png" onmouseover="this.src='images/enroll-now-hover.png'" onmouseout="this.src='images/enroll-now.png'" name="enroll-now"  />
+                  <!--<a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Enroll Now3','','images/enroll-now-hover.png',1)"><img src="images/enroll-now.png" alt="Enroll Now" width="103" height="28" id="Enroll Now3" /></a>--> </div>
+                  <div class="user-input"> No. of Users
+                    <input type="text" class="user-value input-area"  />
+                  </div>
+                  <div> </div>
+                </div>
+              </div>
+              <div class="package-bottomarea">
+                <div class="package-line"></div>
+                <div class="package-header-2">
+                  <div class="package-title"> <a class="b215703" href="javascript:void();">View Package Benefits</a> </div>
+                  <div class="package-title"> <a class="c215703" href="javascript:void();">Included Courses</a> </div>
+                </div>
+              </div>
+              <div class="package-detail" id="b215703">
+                <p><strong>Kit Description: </strong></p>
+                <p>Must have C-Store Employee courses for food &amp; beverage sales.</p>
+                <p><strong>Target Audience: </strong></p>
+                <p>Non-Manager level employees for C-Store industry. </p>
+                <p><strong>Difficulty Level: </strong></p>
+                <p>Easy </p>
+                <p><strong>Topics covered:</strong></p>
+                <p>Topics Covered:&nbsp;&nbsp; Food Safety Handler &ndash; Providing a foundational education for the proper handling and practice of Food.&nbsp;&nbsp; Alcohol Seller Off-Premises &ndash; Providing a necessary education in proper liability protection for employee and company, how to recognize the effects of alohol, general knowledge of the effects of alcohol, how to properly check identification and recognize minors.&nbsp;&nbsp; Tobacco Seller &ndash; Covering the proper methods to sell tobacco to customers. Students will learn facts about tobacco such as origin and health concerns. Students will also learn how to card customers and spot fradulent identification.</p>
+              </div>
+              <div class="package-detail" id="c215703">
+                <p><strong>Kit Description: </strong></p>
+                <p>Must have C-Store Employee courses for food &amp; beverage sales.</p>
+                <p><strong>Target Audience: </strong></p>
+                <p>Non-Manager level employees for C-Store industry. </p>
+                <p><strong>Difficulty Level: </strong></p>
+                <p>Easy </p>
+                <p><strong>Topics covered:</strong></p>
+                <p>Topics Covered:&nbsp;&nbsp; Food Safety Handler &ndash; Providing a foundational education for the proper handling and practice of Food.&nbsp;&nbsp; Alcohol Seller Off-Premises &ndash; Providing a necessary education in proper liability protection for employee and company, how to recognize the effects of alohol, general knowledge of the effects of alcohol, how to properly check identification and recognize minors.&nbsp;&nbsp; Tobacco Seller &ndash; Covering the proper methods to sell tobacco to customers. Students will learn facts about tobacco such as origin and health concerns. Students will also learn how to card customers and spot fradulent identification.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="courses-area">
+          <div class="heading">Individual Courses</div>
+          
+          
+          <div id="paging_container" class="container">
+            <div class="display-pagenumber">
+              <div class="display-left-arrow"> <a href="#"><img src="images/leftarrow.png" alt="Left Arrow"  /></a> </div>
+              <div class="display-number">Displaying products 1 - 12 of 30</div>
+              <div class="display-right-arrow"> <a href="#"><img src="images/rightarrow.png" alt="Right Arrow" /></a> </div>
+            </div>
+            
+            <!--Course Top List Start-->
+            <div class="course-related">
+                <ul>
+                    <li class="first-course">COURSE NAME</li>
+                    <li class="delivery">COURSE DELIVERY</li>
+                    <li class="hour">CREDIT HOURS</li>
+                    <li class="type">CREDIT TYPE</li>
+                    <li class="course-price">PRICE</li>
+                    <li class="last-course">QTY</li>
+                </ul>
+            </div>
+                <div class="course-sorting">
+                    <select class="course-sort">
+                        <option>Sort Course By</option>
+                        <option>Ascending Order</option>
+                        <option>Descending Order</option>
+                    </select>
+                </div>
+          
+            <!--Course Top List End-->
+            
+            <!--Course List Start-->
+            <div class="course-list">
+                	<ul>
+                    	<li class="course-name">Principle II (Online)</li>
+                        <li class="pc-icon"><img src="images/course-pc-icon.png" alt="Pc Icon"  /></li>
+                        <li class="course-credit">20*</li>
+                        <li class="course-type">Real Estate Principle</li>
+                        
+                        <li class="course-price">$40.00</li>
+                        <li class="course-user"><input type="text" class="user-value input-area"  /></li>
+                        <li class="course-cart">
+                        <!--<input type="image" src="images/add-to-cart.png" value="Submit" name="Submit" />-->
+                        <input type="image" src="images/add-to-cart.png" onmouseover="this.src='images/add-to-cart-hover.png'" onmouseout="this.src='images/add-to-cart.png'" value="Submit" name="Submit" /> </li>
+                    </ul>
+                </div>
+            <div class="course-list">
+                	<ul>
+                    	<li class="course-name">TABC Seller Certification</li>
+                        <li class="pc-icon"><img src="images/course-pc-icon.png" alt="Pc Icon"  /></li>
+                        <li class="course-credit">3</li>
+                        <li class="course-type">Certification</li>
+                        
+                        <li class="course-price">$35.00</li>
+                        <li class="course-user"><input type="text" class="user-value input-area"  /></li>
+                        <li class="course-cart">
+                        <!--<input type="image" src="images/add-to-cart.png" value="Submit" name="Submit" />-->
+                        <!--<a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Add to Cart2','','images/add-to-cart-hover.png',1)"><img src="images/add-to-cart.png" alt="Add to Cart" width="141" height="32" id="Add to Cart2" /></a> </li>-->
+                        <input type="image" src="images/add-to-cart.png" onmouseover="this.src='images/add-to-cart-hover.png'" onmouseout="this.src='images/add-to-cart.png'" value="Submit" name="Submit" />
+                    </ul>
+                </div>
+            <div class="course-list">
+                	<ul>
+                    	<li class="course-name">Ethics and Fraud and we need to see a second line</li>
+                        <li class="pc-icon"><img src="images/course-pc-icon.png" alt="Pc Icon"  /></li>
+                        <li class="course-credit">4</li>
+                        <li class="course-type">Ethics</li>
+                        
+                        <li class="course-price">$40.00</li>
+                        <li class="course-user"><input type="text" class="user-value input-area"  /></li>
+                        <li class="course-cart"><input type="image" src="images/add-to-cart.png" onmouseover="this.src='images/add-to-cart-hover.png'" onmouseout="this.src='images/add-to-cart.png'" value="Submit" name="Submit" /></li>
+                    </ul>
+                </div>
+            
+             <!--
+            <div class="course-list">
+                <ul>
+                    <li class="course-name">Managing Conflict: A Collaborative
+Approach (Manager’s Edition)</li>
+                    <li class="pc-icon"><img src="images/course-pc-icon.png" alt="Pc Icon"  /></li>
+                    <li class="course-user">No. of Users <input type="text" class="user-value input-area"  /></li>
+                    <li class="course-credit">1 hr</li>
+                    <li class="course-price">$40.00</li>
+                    <li class="course-cart"><input type="image" src="images/add-to-cart.png" value="Submit" name="Submit" /></li>
+                </ul>
+            </div>
+            <div class="course-list">
+                <ul>
+                    <li class="course-name">Meeting the Delegation Challenge</li>
+                    <li class="pc-icon"><img src="images/course-pc-icon.png" alt="Pc Icon"  /></li>
+                    <li class="course-user">No. of Users <input type="text" class="user-value input-area"  /></li>
+                    <li class="course-credit">1 hr</li>
+                    <li class="course-price">$40.00</li>
+                    <li class="course-cart"><input type="image" src="images/add-to-cart.png" value="Submit" name="Submit" /></li>
+                </ul>
+            </div>
+            <div class="course-list">
+                <ul>
+                    <li class="course-name">Maximizing Employee Performance</li>
+                    <li class="pc-icon"><img src="images/course-pc-icon.png" alt="Pc Icon"  /></li>
+                    <li class="course-user">No. of Users <input type="text" class="user-value input-area"  /></li>
+                    <li class="course-credit">1 hr</li>
+                    <li class="course-price">$40.00</li>
+                    <li class="course-cart"><input type="image" src="images/add-to-cart.png" value="Submit" name="Submit" /></li>
+                </ul>
+            </div>
+            <div class="course-list">
+                <ul>
+                    <li class="course-name">How to Hire the Right People</li>
+                    <li class="pc-icon"><img src="images/course-pc-icon.png" alt="Pc Icon"  /></li>
+                    <li class="course-user">No. of Users <input type="text" class="user-value input-area"  /></li>
+                    <li class="course-credit">1 hr</li>
+                    <li class="course-price">$40.00</li>
+                    <li class="course-cart"><input type="image" src="images/add-to-cart.png" value="Submit" name="Submit" /></li>
+                </ul>
+            </div>
+            <div class="course-list">
+                <ul>
+                    <li class="course-name">Leading a High-Performance Team<br />
+                    </li>
+                    <li class="pc-icon"><img src="images/course-pc-icon.png" alt="Pc Icon"  /></li>
+                    <li class="course-user">No. of Users <input type="text" class="user-value input-area"  /></li>
+                    <li class="course-credit">1 hr</li>
+                    <li class="course-price">$40.00</li>
+                    <li class="course-cart"><input type="image" src="images/add-to-cart.png" value="Submit" name="Submit" /></li>
+                </ul>
+            </div>
+            <div class="course-list">
+                <ul>
+                    <li class="course-name">Management Basics</li>
+                    <li class="pc-icon"><img src="images/course-pc-icon.png" alt="Pc Icon"  /></li>
+                    <li class="course-user">No. of Users <input type="text" class="user-value input-area"  /></li>
+                    <li class="course-credit">1 hr</li>
+                    <li class="course-price">$40.00</li>
+                    <li class="course-cart"><input type="image" src="images/add-to-cart.png" value="Submit" name="Submit" /></li>
+                </ul>
+            </div>
+            -->
+            
+            <p class="italic">* Indicates course duration. This course is not for credit hour.</p>
+            
+            <!--Course List End--> 
+          </div>
+        </div>
+      </div>
+      <p>&nbsp;</p>
+    </div>
+    
+    <!-- END SlideShow --> 
+    <!-- BEGIN Content --> 
+    
+    <!-- END Content --> 
+    
+  </div>
+</div>
+
+<!-- BEGIN LayoutContainerBottom.jspf --> 
+
+<!-- BEGIN FooterDisplay.jspf --> 
+
+<!-- BEGIN CachedFooterDisplay.jsp -->
+<div class="clear"></div>
+<div class="footarea">
+  <div id="footer">
+    <div class="footer_content">
+      <div class="footer_menu"> <span style="float:left;"><img src="images/footer-logo.png" alt="Everest" /></span>
+        <ul>
+          <li> P.O. Box 587, Pendleton, SC 29670 </li>
+          <li>College Information 864-646-8361</li>
+          <li class="last">Toll-free 866-269-5677</li>
+        </ul>
+      </div>
+      <div class="social_networking"><a href="#"> <img width="32" height="32" alt="facebook" src="images/facebook.png"/></a> <a href="#"> <img width="32" height="32" alt="twitter" src="images/twitter.png" /></a> <a href="#"><img width="32" height="32" alt="linkedin" src="images/linked-in.png"/></a> <a href="#"><img width="32" height="32" alt="gmail" src="images/gmail.png" /></a></div>
+      <br clear="all"/>
+      <div class="clr"></div>
+    </div>
+    
+    <!-- END CachedFooterDisplay.jsp --> 
+    
+    <!-- END FooterDisplay.jspf --> 
+    
+    <!-- END LayoutContainerBottom.jspf --> 
+    
+    <!-- END TopCategoriesDisplay.jsp --> 
+    
+  </div>
+  <div class="footer-bottom">
+    <div class="copyright">
+      <ul>
+        <li>Powered by <a href="#">360training.com</a></li>
+        <li class="last footnote">&copy;2013 360training.com. All rights reserved.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>360Training</title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<!--[if IE 7]>  
+<link rel="stylesheet" type="text/css" href="css/ie7.css" />  
+<![endif]-->
+<!--[if IE 8]>  
+<link rel="stylesheet" type="text/css" href="css/ie8.css" />  
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="css/ie9.css" />
+<![endif]-->
+
+<!-- BEGIN CommonJSToInclude.jspf -->
+<!-- END CommonJSToInclude.jspf -->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/common.js" ></script>
+<script type="text/javascript" src="js/jquery.accordion.js" ></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery('div#sideNav li > ul li span[class=current]').parents('ul').show().prev('span').addClass('accordionExpanded');
+	jQuery('div#sideNav li:has(ul)').addClass('nobg');	
+	jQuery('<span></span>').insertBefore('div#sideNav li:has(ul) ul');	
+	jQuery('div#sideNav li:has(ul) span').addClass('accordion');
+	jQuery('div#sideNav li:has(ul) > span').click(function() {
+		jQuery(this).toggleClass('accordionExpanded');
+		jQuery(this).next('ul').slideToggle('fast');
+		jQuery(this).parent().siblings('li').children('ul:visible').slideUp('fast').parent('li').find('span').removeClass('accordionExpanded');
+		return false;
+	});
+	
+		var url = "http:\/\/www.learninsurance.com\/xactimate-insurance-claims-training";
+	// Will also work for relative and absolute hrefs
+	jQuery('div#sideNav li a').filter(function() { return this.href == url; }).addClass('active').parents('ul').show().prev('span').addClass('accordionExpanded');
+	
+});
+</script>
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {				
+		//accordion
+		$('.accordion').accordion({
+			defaultOpen: 'section1',
+			cookieName: 'accordion_nav',
+			speed: 'slow',
+			animateOpen: function (elem, opts) { //replace the standard slideUp with custom function
+				elem.next().slideFadeToggle(opts.speed);
+			},
+			animateClose: function (elem, opts) { //replace the standard slideDown with custom function
+				elem.next().slideFadeToggle(opts.speed);
+			}
+		});
+		//custom animation for open/close
+		$.fn.slideFadeToggle = function(speed, easing, callback) {
+			return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);
+		};
+	});
+//]]>
+</script>
+</head>
+<body>
+<!-- BEGIN StoreCommonUtilities.jspf --> 
+<!-- END StoreCommonUtilities.jspf --> 
+
+<!-- BEGIN LayoutContainerTop.jspf -->
+<div id="main-container" class="clearfix">
+  <div id="wrapper"> 
+    <!-- BEGIN Header --> 
+    <!-- BEGIN HeaderDisplay.jspf --> 
+    
+    <!-- BEGIN CachedHeaderDisplay.jsp -->
+    
+    <div id="header">
+        <div class="logo"><a href="#"><img border="0px" width="214" height="86" alt="everest.com" src="images/logo.gif" /></a></div>
+      <div class="header_right">
+        <div class="sales_enroll"><span class="dial-no">(888) 249-8145</span> 
+        <span class="header-top">M-F 8am-5pm EST</span> </div>
+        <div class="search-container">
+        <span class="search-btn"><a href="#"><img src="images/search-left-corner-btn.jpg" width="32" height="29" alt="" /></a></span>
+        <span class="inputarea"><input name="" type="text" onblur="if(value==''){value='Search...';}" onclick="if(value=='Search...'){value='';}" value="Search..." /></span>
+        <span class="searchrightcorner"><img src="images/search-right-corner.jpg" width="18" height="29" alt="" /></span>
+        </div>
+      <!-- BEGIN ESpotNavDisplay.jsp -->
+      <div id="navigation">
+        <div class="n_menu">
+        <ul>
+          <li class="home"><a href="#"><img src="images/home-icon.png" width="24" height="21" alt="" /></a></li>
+          <li class="seprator"></li>
+          <li><a href="#"> Request Information</a></li>
+          <li class="seprator"></li>
+          <li><a href="services.html"> Support</a></li>
+          <li class="seprator"></li>
+          <!--class="chat" -->
+          <li class="login"><a href="#" class="logintxt"> Log in </a>
+            <div class="popup_login" style="display: none;">
+              <div class="loginform">
+                                                                              <dl>
+                  <dt><a href="#">Log in and continue shopping</a></dt>
+                  <dt><a href="#">Go to my courses (My LMS)</a></dt>
+                  </dl>
+                </div>
+            </div>
+        
+          </li>
+          <li class="seprator"></li>
+          <!-- BEGIN MiniShopCartDisplay.jsp -->
+          <li class="cart"><a href="#" class="carttxt"> 0 Item(s) </a>
+          
+          <div class="popup_cart" style="display: none;">
+              <div class="cart_menu">
+               
+                  <div class="cartitems_container"><div class="cartitems"><span class="item_name">Maximizing Employee Performance</span><span class="item_price">$40.00</span></div></div>
+
+                  <span class="checkout_btn"><input name="" type="image" src="images/checkout_btn.png" /></span>
+             
+                </div>
+            </div>
+          </li>
+          
+        
+          <!-- END MiniShopCartDisplay.jsp -->
+        </ul>
+        </div>
+        
+        <!-- END ESpotNavDisplay.jsp --> 
+        
+        <!-- END CachedHeaderDisplay.jsp --> 
+        <!-- END HeaderDisplay.jspf --> 
+        
+        <!-- END Navigation --> 
+        <!-- BEGIN LeftColumn --> 
+        
+        <!-- BEGIN LeftSidebarDisplay.jspf --> 
+        <!-- BEGIN CachedLeftSidebarDisplay.jsp -->
+        <div class="clr"></div>
+        </div>
+      <!-- END Navigation --> 
+ </div>
+
+      
+      <!--<div class="live_sale"> (888) 249-8145 |  M-F 8am-5pm EST</div>--> 
+      
+      <!-- BEGIN Navigation --> 
+      
+
+      
+    </div>
+    
+    <!-- END Header --> 
+    
+    <!-- Breadcrum Start -->
+    <div class="breadcrum-menu">
+      <ul class="breadcrum">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Business Skills</a></li>
+        <li><a href="#">Effective Leadership</a></li>
+        <li class="last active"><a href="#">Maximizing Employee Performance</a></li>
+      </ul>
+    </div>
+    
+    <!-- Breadcrum End --> 
+    
+    <!-- BEGIN LeftColumn -->
+    <div class="product-main-content">
+      <div class="product-contentarea">
+        <h1>Maximizing Employee Performance</h1>
+        <div class="product-leftarea">
+          <h2>Description</h2>
+          <div class="product-content"><img src="images/product-thumb.jpg" alt="thumb"  />
+            <p>This course teaches managers how to bring out the best performance possible in                           their employees by using a hands-on, straightforward performance management 
+              process. Managers have a vital role to play in the successful performance of each 
+              individual in a work group and of the group as a whole. With a strong focus on 
+              employee-participation and positive reinforcement, this module outlines how to set 
+              expectations, coach for performance, solve performance issues, and develop employee performance. 
+              If used effectively, these techniqus will result in extremely motivated, productive, and satisfied 
+              employees. Throught the use of interactivities and fictional scenarios, managers will learn how to set 
+              goals with their employes, define job responsibilities, effectively use coaching, counseling, and 
+              discipline to improve performance, and hot to evaluate and further develop employee performance 
+              over time.</p>
+          </div>
+          <div class="data" id="FaQ">
+            <div class="faq-container">
+              <div class="accordion-container">
+                <div class="accordion accordion-close" id="whatyoulearn">What You’ll Learn<span></span></div>
+                <div class="container" style="display: none;">
+                  <div class="content">
+                    <strong>Learning Objectives:</strong>
+                <ul><li> Describe alcohol use. </li>
+                  <li> Define terms used in this course</li>
+                  <li> Describe the purpose, goals, and rules for seller-server training and certification</li>
+                  <li> Identify the seller-server’s role in the enhancement of public safety</li>
+                  <li> Check IDs accurately, and recognize clues for when an individual is using a fake ID</li>
+                  <li> Use observations to detect that a minor is attempting to purchase alcohol</li>
+                  <li> Recognize second-party sales </li>
+                </ul>
+                    </p>
+                  </div>
+                </div>
+                <div class="accordion accordion-close" id="finalexaminfo">Subject Matter Expert<span></span></div>
+                <div class="container" style="display: none;">
+                  <div class="content"> Martin Langley is one of only a few adjusters in the country to receive the Affiliate Trainer designation by Xactimate&reg;. Langley moved into insurance adjusting and was deployed to several storms. He is an Xactimate&reg; Level III subject matter expert and qualified as an Xactimate&reg; certified Affiliate Trainer (XAT). <br>
+                    <br>
+                    Langley is a Fellow of the Royal Institution of Chartered Surveyors (FRICS), the premier property designation in Europe. He was national Chief Appraiser to GMAC. </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Course_FAQs_N">
+            <div id="accordion"> 
+              <!--<div id="course-obj" class="accordion accordion-n-close accordion-close">Course Requirements<span></span></div>-->
+              <div class="container" style="display: none;">
+                <div class="content">
+                  <div class="regulator_contact_information">
+                    <h4>Regulator Contact Information: </h4>
+                    <p><strong>Wisconsin Department of Revenue Alcohol and Tobacco Enforcement Section</strong></p>
+                    <dl>
+                      <dt>Name: </dt>
+                      <dt>Wisconsin Responsible Beverage Server Training</dt>
+                      <dt>Phone: </dt>
+                      <dt>608-266-6757</dt>
+                      <dt>Website URL: </dt>
+                      <dt> <a href="http://www.dor.state.wi.us/training/index.html" target="_blank">http://www.dor.state.wi.us/training/index.html</a> </dt>
+                      <dt>Email Address:</dt>
+                      <dt><a href="mailto:excise@revenue.wi.gov">excise@revenue.wi.gov</a></dt>
+                      <dt>Address:</dt>
+                      <dt>Mail Stop 6-40 P.O. Box 8933 </dt>
+                      <dt>City:</dt>
+                      <dt>Madison</dt>
+                      <dt>State:</dt>
+                      <dt>WI</dt>
+                      <dt class="last">Zip:</dt>
+                      <dt class="last">53708-8900</dt>
+                    </dl>
+                    <div class="clearfix"></div>
+                    <br>
+                    <h4>Credential Continuing Education Requirements:</h4>
+                    <p><strong>Wisconsin Responsible Beverage Server Training</strong></p>
+                    <h4>This Course Satisfies:</h4>
+                    <dl>
+                      <dt>Credit(s):</dt>
+                      <dt>4.0</dt>
+                      <dt class="last">Credit Type:</dt>
+                      <dt class="last">Certification</dt>
+                    </dl>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-close">Objectives<span></span></div>
+              <div class="container" style="display: none;">
+                <p>Learning Objectives</p>
+                <p>- Describe alcohol use. <br>
+                  - Recognize the effects of alcohol.<br>
+                  - Identify the seller’s role in the enhancement of public safety.<br>
+                  - Discuss the seller’s responsibilities and obligations under the law.<br>
+                  - Define blood alcohol concentration and how it is calculated.<br>
+                  - Describe the effects of mixing alcohol with other drugs.<br>
+                  - Recognize intoxicated individuals. <br>
+                  - Refuse a sale to someone with little conflict. <br>
+                  - Prevent disturbances in the establishment and handle difficult situations.<br>
+                  - Check IDs accurately, and recognize clues for when an individual is using a fake ID. <br>
+                  - Recognize second-party sales.<br>
+                </p>
+              </div>
+              <div class="accordion faq-2lines accordion-close">Features<span></span></div>
+              <div class="container" style="display: none;"> <br>
+                -Describe alcohol use. <br>
+                <br>
+                - Recognize the effects of alcohol.<br>
+                <br>
+                - Identify the seller’s role in the enhancement of public safety.<br>
+                <br>
+                - Discuss the seller’s responsibilities and obligations under the law.<br>
+                <br>
+                - Define blood alcohol concentration and how it is calculated.<br>
+                <br>
+                - Describe the effects of mixing alcohol with other drugs.<br>
+                <br>
+                - Recognize intoxicated individuals. <br>
+                <br>
+                - Refuse a sale to someone with little conflict. <br>
+                <br>
+                - Prevent disturbances in the establishment and handle difficult situations.<br>
+                <br>
+                - Check IDs accurately, and recognize clues for when an individual is using a fake ID. <br>
+                <br>
+                - Recognize second-party sales.<br>
+                <p></p>
+              </div>
+              <div class="accordion accordion-close">Exams<span></span></div>
+              <div class="container" style="display: none;">
+                <p><strong>The final exam must be successfully passed with a 70% or higher to receive the certificate of completion.</strong></p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="product-rightarea">
+          <div><a href="#" class="read-more"><img src="images/back-arrow.png" alt="Back to Catalog" /> Back to Catalog</a></div>
+          <div class="product-coursedetail">
+	      
+            <h3>Course Details:</h3>
+            <ul>
+              <li class="pc-icon">Course Format: Online</li>
+              <li>Course Duration: 1 hr</li>
+              <li>Regulatory Requirements: None</li>
+            </ul>
+            
+            <div class="pricing">Price: <sup class="dollar-sign">$</sup><span class="price">40.00</span> </div>
+            <div class="retail">Retail: <span class="cross">$XX</span> YOU SAVE $X</div>
+            <div class="users">No. of Users
+              <input class="user-value" type="text" placeholder="1" align="middle"  />
+            </div>
+            <div class="cart-btn">
+            <input type="image" src="images/add-to-cart.png" onmouseover="this.src='images/add-to-cart-hover.png'" onmouseout="this.src='images/add-to-cart.png'" value="Submit" name="Submit" /></div>
+          </div>
+          <div class="watch-demo"> <a href="#"><img src="images/watch-demo.jpg" alt="Watch our Demo"  /></a> </div>
+          <div class="everest-espot"><img src="images/everest-espot.jpg" alt="Everest Espot"  /></div>
+        </div>
+      </div>
+    </div>
+    <!-- END CachedLeftSidebarDisplay.jsp --> 
+    
+    <!-- END LeftSidebarDisplay.jspf --> 
+    
+    <!-- END LayoutContainerTop.jspf --> 
+    
+    <!-- End LeftColumn --> 
+    <!-- BEGIN SlideShow -->
+    <div id="template_content">
+      <p>&nbsp;</p>
+    </div>
+    
+    <!-- END SlideShow --> 
+    <!-- BEGIN Content --> 
+    
+    <!-- END Content --> 
+    
+  </div>
+</div>
+
+<!-- BEGIN LayoutContainerBottom.jspf --> 
+
+<!-- BEGIN FooterDisplay.jspf --> 
+
+<!-- BEGIN CachedFooterDisplay.jsp -->
+
+<div id="footer">
+  <div class="footer_content">
+    <div class="footer_menu"> <span style="float:left;"><img src="images/footer-logo.png" alt="Everest" /></span>
+      <ul>
+        <li> P.O. Box 587, Pendleton, SC 29670 </li>
+        <li>College Information 864-646-8361</li>
+        <li class="last">Toll-free 866-269-5677</li>
+      </ul>
+    </div>
+    <div class="social_networking"><a href="#"> <img width="32" height="32" alt="facebook" src="images/facebook.png"></a> <a href="#"> <img width="32" height="32" alt="twitter" src="images/twitter.png" /></a> <a href="#"><img width="32" height="32" alt="linkedin" src="images/linked-in.png"></a> <a href="#"><img width="32" height="32" alt="gmail" src="images/gmail.png" /></a></div>
+    <br clear="all">
+    <div class="clr"></div>
+  </div>
+  
+  <!-- END CachedFooterDisplay.jsp --> 
+  
+  <!-- END FooterDisplay.jspf --> 
+  
+  <!-- END LayoutContainerBottom.jspf --> 
+  
+  <!-- END TopCategoriesDisplay.jsp --> 
+  
+</div>
+<div class="footer-bottom">
+  <div class="copyright">
+    <ul>
+      <li>Powered by <a href="#">360training.com</a></li>
+      <li class="last footnote">&copy;2013 360training.com. All rights reserved.</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
